@@ -67,7 +67,7 @@
 var jison    = require("jison").Parser;
 
 var GGsimulator; // if GeoGate development tree uses local modules
-if  (process.env.GEOGATE !== 'dev') GGsimulator = require('ggsimulator');
+if  (process.env.GEOGATE !== 'dev') GGsimulator = require("GG-Simulator");
     else GGsimulator = require("../ApiExport");
 
 ParseArgs = function (command, args) {
@@ -190,10 +190,10 @@ ParseArgs = function (command, args) {
     if (! parsing.opts.help) {
 
         // note: depending on module they only use a subset of opts
-        var simulator  = new GGsimulator.Simulator (parsing.opts);  // parse GPX route and compute position
+        var simulator  = new GGsimulator(parsing.opts);  // parse GPX route and compute position
         if (simulator.valid) {                              // if simulator fail exit now
-
-            var dispatcher = new GGsimulator.Dispatcher(parsing.opts);  // dispatch message to tcp clients
+            var Dispatcher =require('GG-Dispatcher');
+            var dispatcher = new Dispatcher(parsing.opts);  // dispatch message to tcp clients
             dispatcher.SetEncoder   (GGsimulator.NmeaAisEncoder);
             dispatcher.SetListener  (simulator);   // ask dispatcher to handle simulator position events
     }

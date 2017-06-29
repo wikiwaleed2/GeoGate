@@ -25,7 +25,7 @@ Config
 Command line
 ============
     * Tracker/GPS/AIS server
-      - node bin/GeoGateServer.js --debug=3 --config=DummyBackend
+      - node bin/GeoGateServer.js --debug=3 --config=MySqlDb
       - telnet localhost 4000
 
     * Debug Tracker adapter

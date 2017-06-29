@@ -49,6 +49,7 @@ var sgeo     = require('sgeo');        // https://www.npmjs.org/package/sgeo
 var xml2js   = require('xml2js');      // https://github.com/Leonidas-from-XIV/node-xml2js
 var EventEmitter    = require("events").EventEmitter;
 
+
 /*
  * GGsimulator uses an async queue to push event at tic rate
  * each gpx segment is processed in one chuck. Every intermediary
@@ -284,6 +285,7 @@ GGsimulator.prototype.NewPosition  = function (job) {
 // import Debug helper
 GGsimulator.prototype.Debug = require('./_Debug');
 
+//GGsimulator.prototype.Dispatcher = require('GG-Dispatcher');
 
 // Process GPX file parse and send NMEA paquet
 GGsimulator.prototype.ProcessGPX= function () {

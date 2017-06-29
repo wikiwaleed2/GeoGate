@@ -47,10 +47,10 @@ var GeoGateConfig = {
     },
 	
   "mysql": { // [should reflect your MySQL configuration]
-	hostname: "10.10.100.101",   // MySql hostname
+	hostname: "192.168.100.69",   // MySql hostname
     basename: "gpsdtest",        // Basename base should exist
-	username: "gpsdtest",        // MySql username
-    password: "MyPasswd"         // MySql password
+	username: "root",        // MySql username
+    password: "zeeshan"         // MySql password
     }
 };
 
